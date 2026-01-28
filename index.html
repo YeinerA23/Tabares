@@ -52,24 +52,36 @@
             .content-box { padding: 30px 20px; }
             .content-box h2 { font-size: 2em; }
             .content-box p { font-size: 1em; }
-            .photo-slide img { height: 400px; }
-            .photo-caption h3 { font-size: 1.4em; }
-            .photo-caption p { font-size: 1em; }
             .final-message { font-size: 1.5em; }
             .audio-btn { padding: 12px 30px; font-size: 1em; }
             .gallery-btn { padding: 10px 20px; font-size: 1em; }
+            
+            /* Fotos 4:3 sin texto en móviles */
+            .photo-slide img {
+                height: auto;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+            }
+            
+            .photo-caption {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
             .hero h1 { font-size: 2em; }
             .hero p { font-size: 1em; }
             .content-box h2 { font-size: 1.5em; }
-            .photo-slide img { height: 300px; }
-            .photo-caption { padding: 20px; }
-            .photo-caption h3 { font-size: 1.2em; }
-            .photo-caption p { font-size: 0.9em; }
             .section { padding: 30px 15px; }
             .gallery-btn { padding: 8px 15px; font-size: 0.9em; }
+            
+            .photo-slide img {
+                aspect-ratio: 4 / 3;
+            }
+            
+            .photo-caption {
+                display: none;
+            }
         }
 
         .hearts {
